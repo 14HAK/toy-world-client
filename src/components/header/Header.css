@@ -6,3 +6,8 @@
 .dropdown:active .dropdown-menu {
   display: block;
 }
+
+.active{
+  text-decoration: underline;
+  background: #2b2b2b;
+}

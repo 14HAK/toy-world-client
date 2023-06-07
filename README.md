@@ -1,1 +1,7 @@
-# Toy Marketplace
+# Toy Marketplace client
+
+#### commit1: first ensure the design setup.
+
+#### commit2: setup simple nested router.
+
+#### commit3: get all the products data and show the all data in shop router page.

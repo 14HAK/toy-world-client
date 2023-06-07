@@ -9,7 +9,7 @@ function App() {
       <div className='col-span-12'>
         <Header></Header>
       </div>
-      <div className='col-span-3 h-[30rem] p-5 bg-[#f6e1e1]'>
+      <div className='col-span-3 h-[45rem] p-5 bg-[#f6e1e1]'>
         <SideBar></SideBar>
       </div>
       <div className='col-span-9 p-5 bg-[#EDD4D5] font-sans'>

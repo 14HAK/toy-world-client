@@ -12,25 +12,31 @@ const SideBar = () => {
         <section className='grid grid-row-12 text-[#d68081] text-left ps-10'>
           <Link
             to={'/home'}
-            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-gray-900'
+            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
           >
             Home
           </Link>
           <Link
             to={'/shop'}
-            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-gray-900'
+            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
           >
             Shop
           </Link>
           <Link
             to={'/cart'}
-            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-gray-900'
+            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
           >
             Cart
           </Link>
           <Link
+            to={'/add_toy'}
+            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
+          >
+            Add-toy
+          </Link>
+          <Link
             to={'/blog'}
-            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-gray-900'
+            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
           >
             Blog
           </Link>
