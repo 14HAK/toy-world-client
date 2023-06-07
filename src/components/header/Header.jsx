@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Header.css';
 import { FaShoppingCart } from 'react-icons/fa';
 
@@ -45,14 +46,15 @@ const Header = () => {
             <nav>
               <ul className='md:flex items-center justify-between text-base pt-4 md:pt-0'>
                 <li>
-                  <a
+                  <Link
+                    to={'/cart'}
                     className='md:px-4 py-2 md:py-4 px-0 block text-slate-700 hover:text-[#F6E1E1] '
                     href=''
                   >
                     <span className='text-2xl'>
                       <FaShoppingCart></FaShoppingCart>
                     </span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <button className='bg-transparent hover:bg-[#f6e1e1] hover:text-slate-700 font-semibold py-2 px-4 border border-slate-500 hover:border-transparent rounded'>
@@ -61,7 +63,7 @@ const Header = () => {
                 </li>
 
                 <li>
-                  <a
+                  <div
                     href=''
                     className='md:ml-4 flex items-center justify-start pointer-cursor'
                   >
@@ -69,7 +71,7 @@ const Header = () => {
                       className='rounded-full w-10 h-10 bg-green-800'
                       src='https://w1.pngwing.com/pngs/537/559/png-transparent-person-avatar-user-symbol-user-profile-face-black-white.png'
                     />
-                  </a>
+                  </div>
                 </li>
               </ul>
             </nav>

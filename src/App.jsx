@@ -1,6 +1,6 @@
+import { Outlet } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import Home from './components/outlate/home/Home';
 import SideBar from './components/sidebar/SideBar';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <SideBar></SideBar>
       </div>
       <div className='col-span-9 p-5 bg-[#EDD4D5] font-sans'>
-        <Home></Home>{' '}
+        <Outlet></Outlet>
       </div>
       <div className='col-span-12 p-5 bg-[#DEB4B4] '>
         {' '}
