@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        devFont: ['Luckiest Guy', 'cursive'],
+      }, //end of fontFamily
+    },
   },
   plugins: [],
 };
