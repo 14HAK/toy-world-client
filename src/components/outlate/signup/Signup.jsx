@@ -36,7 +36,7 @@ const Signup = () => {
   };
 
   return (
-    <div className='overflow-y-auto h-[42rem]'>
+    <div className=''>
       <div className='p-10'>
         <section className='max-w-lg mx-auto bg-[#F6E1E1] p-8 rounded-xl shadow shadow-slate-300'>
           <h1 className='text-4xl font-medium'>Sign up</h1>

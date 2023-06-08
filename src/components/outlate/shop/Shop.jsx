@@ -29,14 +29,14 @@ const Shop = () => {
   };
 
   return (
-    <div className='overflow-y-auto h-[40rem]'>
+    <div>
       <div className='p-2 text-center'>
         <div className='max-w-lg mx-auto'>
           <div className='inline-flex shadow-sm rounded-md mb-5' role='group'>
             <button
               onClick={handleALLData}
               type='button'
-              className='rounded-l-lg border border-[#C05B51] bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:ring-1 focus:ring-[tomato] focus:text-slate-700'
+              className='rounded-l-lg border-y border-[#C05B51] bg-white text-sm font-medium px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:ring-1 focus:ring-[tomato] focus:text-slate-700'
             >
               ALL
             </button>

@@ -12,4 +12,6 @@
 
 #### commit6: shop product data show by filtering mean need a data and get all of a related data.,
 
-#### commit7: shop product card ratings work use npm react ratings.,
+#### commit7: shop product card ratings work use npm react ratings.
+
+#### commit8: GET SINGLE DATA from mongodb using deferent product id and show data in Details product page

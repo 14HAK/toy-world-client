@@ -1,6 +1,6 @@
 const Blog = () => {
   return (
-    <div className='overflow-y-auto h-[42rem]'>
+    <div className=''>
       <div className='w-full h-screen bg-[#F6E1E1] px-12 py-5 overflow-x-hidden'>
         <div className='pb-10'>
           <h2 className='text-2xl uppercase font-semibold mb-2'>
