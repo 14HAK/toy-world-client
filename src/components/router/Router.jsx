@@ -6,6 +6,8 @@ import Cart from '../outlate/cart/Cart';
 import Blog from '../outlate/blog/Blog';
 import ErrorPage from '../errorPage/ErrorPage';
 import AddToy from '../outlate/addToy/AddToy';
+import Signin from '../outlate/signin/Signin';
+import Signup from '../outlate/signup/Signup';
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ export const router = createBrowserRouter([
       {
         path: '/add_toy',
         element: <AddToy></AddToy>,
+      },
+      {
+        path: '/sign_in',
+        element: <Signin></Signin>,
+      },
+      {
+        path: '/sign_up',
+        element: <Signup></Signup>,
       },
     ],
   },

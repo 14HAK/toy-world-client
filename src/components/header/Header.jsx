@@ -5,8 +5,16 @@ import { useContext } from 'react';
 import { UserContext } from '../context/ContextPass';
 
 const Header = () => {
-  const { user } = useContext(UserContext);
-  console.log(user);
+  const { user, setUser, SignoutUser } = useContext(UserContext);
+
+  const handleSignout = () => {
+    SignoutUser()
+      .then(() => {
+        setUser(null);
+      })
+      .catch();
+  };
+
   return (
     <header>
       <header className='lg:px-16 px-8 bg-[#DEB4B4] shadow-md py-4 md:py-0'>
@@ -60,23 +68,39 @@ const Header = () => {
                     </span>
                   </Link>
                 </li>
-                <li>
-                  <button className='bg-transparent hover:bg-[#f6e1e1] hover:text-slate-700 font-semibold py-2 px-4 border border-slate-500 hover:border-transparent rounded'>
-                    Sign out
-                  </button>
-                </li>
 
-                <li>
-                  <div
-                    href=''
-                    className='md:ml-4 flex items-center justify-start pointer-cursor'
-                  >
-                    <img
-                      className='rounded-full w-10 h-10 bg-green-800'
-                      src='https://w1.pngwing.com/pngs/537/559/png-transparent-person-avatar-user-symbol-user-profile-face-black-white.png'
-                    />
-                  </div>
-                </li>
+                {!user ? (
+                  <li>
+                    <Link to={'/sign_in'}>
+                      <button className='bg-transparent hover:bg-[#f6e1e1] hover:text-slate-700 font-semibold py-2 px-4 border border-slate-500 hover:border-transparent rounded'>
+                        Sign in
+                      </button>
+                    </Link>
+                  </li>
+                ) : (
+                  <>
+                    <li>
+                      <button
+                        onClick={handleSignout}
+                        className='bg-transparent hover:bg-[#f6e1e1] hover:text-slate-700 font-semibold py-2 px-4 border border-slate-500 hover:border-transparent rounded'
+                      >
+                        Sign out
+                      </button>
+                    </li>
+
+                    <li>
+                      <div
+                        href=''
+                        className='md:ml-4 flex items-center justify-start pointer-cursor'
+                      >
+                        <img
+                          className='rounded-full w-10 h-10 bg-green-800'
+                          src={user?.photoURL}
+                        />
+                      </div>
+                    </li>
+                  </>
+                )}
               </ul>
             </nav>
           </div>
