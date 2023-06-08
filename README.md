@@ -9,3 +9,5 @@
 #### commit4: useContext() setup.
 
 #### commit5: firebase authentication, sign in, sign out, sign up & others,
+
+#### commit6: shop product data show by filtering mean need a data and get all of a related data,
