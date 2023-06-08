@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import './Header.css';
 import { FaShoppingCart } from 'react-icons/fa';
+import { useContext } from 'react';
+import { UserContext } from '../context/ContextPass';
 
 const Header = () => {
+  const { user } = useContext(UserContext);
+  console.log(user);
   return (
     <header>
       <header className='lg:px-16 px-8 bg-[#DEB4B4] shadow-md py-4 md:py-0'>

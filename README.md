@@ -5,3 +5,5 @@
 #### commit2: setup simple nested router.
 
 #### commit3: get all the products data and show the all data in shop router page.
+
+#### commit4: useContext() setup.
