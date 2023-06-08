@@ -1,4 +1,11 @@
+import React from 'react';
+import Full from '../../../../assets/Full.svg';
+import Empty from '../../../../assets/Empty.svg';
+import Half from '../../../../assets/Half.svg';
+
 import { Link } from 'react-router-dom';
+import Rating from 'react-rating';
+React.createElement(Rating);
 
 const DetailsProduct = ({ product }) => {
   // console.log(data);
@@ -14,7 +21,7 @@ const DetailsProduct = ({ product }) => {
           <h2 className='tracking-widest text-xs title-font font-medium text-slate-600 mb-1'>
             {product?.category}
           </h2>
-          <h1 className='title-font text-lg font-medium text-gray-900 mb-3'>
+          <h1 className='title-font text-lg font-medium text-gray-900'>
             {product?.name}
           </h1>
           <p className='leading-relaxed mb-3'>
@@ -24,10 +31,18 @@ const DetailsProduct = ({ product }) => {
             <span>$-</span>
             <span>{product?.price}</span>
           </p>
-          <p className='text-md grid grid-cols-4 justify-center items-center pb-2'>
-            <span>ratings</span>
-            <span>2.5k</span>
+
+          <p className='flex gap-1'>
+            <span className='underline'>({product?.ratings})</span>
+            <Rating
+              initialRating={product?.ratings}
+              readonly
+              fullSymbol={<img src={Full} />}
+              placeholderSymbol={<img src={Half} />}
+              emptySymbol={<img src={Empty} className='icon' />}
+            />
           </p>
+
           <div className='flex items-center flex-wrap '>
             <Link
               to={''}
