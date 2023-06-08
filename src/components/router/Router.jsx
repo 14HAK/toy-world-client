@@ -9,6 +9,7 @@ import AddToy from '../outlate/addToy/AddToy';
 import Signin from '../outlate/signin/Signin';
 import Signup from '../outlate/signup/Signup';
 import Details from '../outlate/shop/detailsProduct/productDetails/Details';
+import PrivateRoute from '../Private/PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -39,7 +40,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/cart',
-        element: <Cart></Cart>,
+        element: (
+          <PrivateRoute>
+            <Cart></Cart>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/blog',
@@ -47,7 +52,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/add_toy',
-        element: <AddToy></AddToy>,
+        element: (
+          <PrivateRoute>
+            <AddToy></AddToy>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/sign_in',

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import SiteLogo from '../../assets/SiteLogo.svg';
+import { useContext } from 'react';
+import { UserContext } from '../context/ContextPass';
 
 const SideBar = () => {
+  const { user } = useContext(UserContext);
   return (
     <nav>
       <div className='font-devFont grid grid-row-12 gap-16 pt-10 justify-center items-center text-center'>
@@ -28,12 +31,16 @@ const SideBar = () => {
           >
             Cart
           </Link>
-          <Link
-            to={'/add_toy'}
-            className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
-          >
-            Add-toy
-          </Link>
+          {!user ? (
+            <></>
+          ) : (
+            <Link
+              to={'/add_toy'}
+              className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
+            >
+              Add-toy
+            </Link>
+          )}
           <Link
             to={'/blog'}
             className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'

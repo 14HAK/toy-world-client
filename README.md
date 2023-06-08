@@ -15,3 +15,5 @@
 #### commit7: shop product card ratings work use npm react ratings.
 
 #### commit8: GET SINGLE DATA from mongodb using deferent product id and show data in Details product page
+
+#### commit9: private routes work demo compleste.
