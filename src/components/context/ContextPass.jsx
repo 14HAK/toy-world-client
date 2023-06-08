@@ -59,10 +59,11 @@ const ContextPass = ({ children }) => {
         setUser(null);
       }
     });
+
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [auth]);
 
   const pass = {
     user,
