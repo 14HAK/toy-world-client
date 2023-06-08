@@ -1,10 +1,14 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/ContextPass';
 
 const Signin = () => {
   const { logInWithEmailPass, GoogleSignin, GithubSignin, setUser } =
     useContext(UserContext);
+  let navigate = useNavigate();
+  let location = useLocation();
+
+  let from = location.state?.from?.pathname || '/';
 
   const handleSignin = (event) => {
     event.preventDefault();
@@ -16,6 +20,7 @@ const Signin = () => {
     logInWithEmailPass(email, password)
       .then((res) => {
         setUser(res.user);
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         console.log(err.message);
