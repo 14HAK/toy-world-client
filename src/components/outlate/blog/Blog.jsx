@@ -4,69 +4,93 @@ const Blog = () => {
       <div className='w-full h-screen bg-[#F6E1E1] px-12 py-5 overflow-x-hidden'>
         <div className='pb-10'>
           <h2 className='text-2xl uppercase font-semibold mb-2'>
-            differences between uncontrolled and controlled components:
+            Differences between SQL and NoSQL:
           </h2>
           <hr className='border border-cyan-600 mb-5' />
           <div>
-            Uncontrolled and controlled components in React refer to different
-            approaches for managing form inputs and their corresponding state.
-            Here are the key differences between them
+            <p>
+              Structured Query language (SQL) pronounced as “S-Q-L” or sometimes
+              as “See-Quel” is the standard language for dealing with Relational
+              Databases. A relational database defines relationships in the form
+              of tables.
+            </p>
             <ul className='pt-3'>
               <li>
-                State Management: In uncontrolled components, the component's
-                state is managed by the DOM itself, and React does not have
-                direct control over the component's values. On the other hand,
-                controlled components have their state managed by React using
-                component state or external state management libraries.
+                0.SQL pronounced as “S-Q-L” or as “See-Quel” is primarily called
+                RDBMS or Relational Databases, whereas NoSQL is a Non-relational
+                or Distributed Database.
               </li>
+              <br />
               <li>
-                Value Handling: Uncontrolled components allow the DOM to handle
-                the input values directly. You can access the input values using
-                DOM methods like getElementById or ref. In controlled
-                components, the value of the input elements is controlled by
-                React and stored in component state. Changes to the input values
-                are handled through event handlers.
-              </li>
+                1.Comparing SQL vs NoSQL databases, SQL databases are
+                table-based databases, whereas NoSQL databases can be
+                document-based, key-value pairs, and graph databases.
+              </li>{' '}
+              <br />
               <li>
-                Validation and Error Handling: With uncontrolled components, it
-                can be more challenging to implement form validation and error
-                handling since the state is managed outside of React. Controlled
-                components make it easier to implement validation and error
-                handling by controlling the state in React, allowing you to
-                validate input values before updating the state.
-              </li>
+                2.SQL databases are vertically scalable, while NoSQL databases
+                are horizontally scalable.
+              </li>{' '}
+              <br />
               <li>
-                Testing: Controlled components are easier to test since their
-                values and behaviors are controlled by React. You can easily
-                simulate user interactions by updating the state and asserting
-                the expected behavior. Uncontrolled components require more
-                effort to test since you need to access and manipulate the DOM
-                directly.
+                3.SQL databases have a predefined schema, whereas NoSQL
+                databases use a dynamic schema for unstructured data.
+              </li>{' '}
+              <br />
+              <li>
+                4.Comparing NoSQL vs SQL performance, SQL requires specialized
+                DB hardware for better performance while NoSQL uses commodity
+                hardware.
               </li>
             </ul>
           </div>
         </div>
         <div className='pb-10'>
           <h2 className='text-2xl font-semibold mb-2'>
-            How to validate React props using PropTypes:
+            What Are Refresh Tokens and How to Use Them Securely:
           </h2>
           <hr className='border border-cyan-600 mb-5' />
           <p>
-            1. Install the prop-types package if it's not already installed. You
-            can install it using npm or yarn: $- npm install prop-types
+            That is, a refresh token is a credential artifact that lets a client
+            application get new access tokens without having to ask the user to
+            log in
+          </p>
+          <br />
+          <br />
+          <p>
+            1. This is a guest post by Pius Aboyi. If you want to learn more
+            about how to manage sessions with refresh tokens, read this blog. If
+            you don’t want to have to write all this code, you can simply use
+            Passage to integrate passwordless authentication into your app, and
+            have them handle all the details for your app. ‍
           </p>
           <p>
-            2. Import the PropTypes object from the prop-types package in your
-            component file. jsx- import PropTypes from 'prop-types';
+            2. A refresh token is a special key that enables a client for an API
+            or service to retrieve new access tokens without requiring the user
+            to perform a complete login. In other words, an application can
+            exchange a valid refresh token for a new access token. In addition
+            to the new access token, the service may return a new refresh token
+            too.
           </p>
           <p>
-            3. Define the prop types for your component by assigning them to the
-            propTypes property of your component.jsx:
+            3. Why do refresh tokens matter, and does a client need to exchange
+            them for a new access token? The main reason why refresh tokens
+            exist is because most access tokens don't live forever. That is to
+            say, an access token may expire after a specific period of time like
+            a few hours or days. Hence, in order to avoid requesting that the
+            client perform an activity like entering a username and password to
+            retrieve a new access token, you can use refresh tokens to get a new
+            access token.
             <pre>...............</pre>
           </p>
           <p>
-            4.PropTypes.string // Validates that the prop is a string should be
-            numbers, boolean etc.
+            4.To answer the above question, let me explain further why access
+            tokens usually have an expiration time. In a situation where a
+            malicious user gets a hold of a valid access token, they can make
+            requests on behalf of a user and access protected data. As a result,
+            access tokens expire after some time and become invalid. Refresh
+            tokens, on the other hand, live longer so that your application can
+            make use of it to retrieve a new access token.
           </p>
           <p>
             5.By defining prop types using PropTypes, you can catch potential
@@ -76,69 +100,61 @@ const Blog = () => {
         </div>
         <div className='pb-10'>
           <h2 className='text-2xl font-semibold mb-2'>
-            React useRef Hook, How to Work?
+            = Express vs Nest = .JS :
           </h2>
           <hr className='border border-cyan-600 mb-5' />
           <p>
-            The useRef hook in React allows you to create a mutable reference to
-            a DOM element or any other value, which can persist across
-            re-renders of a component. It can be used to access and modify a DOM
-            node directly, or to store any other type of mutable data that you
-            want to persist between renders.
+            Express is a minimalist and flexible framework that is easy to use
+            and has a large community of developers. NestJS, on the other hand,
+            is a newer framework that provides additional features such as
+            dependency injection, a modular architecture, and an intuitive CLI.
+          </p>
+          <br />
+          <br />
+          <p>
+            1. (Express): Express is a minimalist and flexible framework that
+            provides a simple and intuitive API for building web applications
+            with Node.js. Some of its key features and benefits include: Simple
+            and intuitive API: Express provides a simple and easy-to-use API
+            that allows developers to quickly build web applications with
+            Node.js. Minimalist approach: Express follows a minimalist approach,
+            which means that it provides only the essential features and leaves
+            the rest to the developers.Middleware support: Express provides
+            built-in support for middleware, which allows developers to add
+            functionality to their applications easily. Large community: Express
+            has a large and active community of developers, which means that
+            there are plenty of resources available for learning and getting
+            help.
+          </p>
+          <p>
+            2. (NestJS): NestJS is a framework that is built on top of Express
+            and provides additional features and benefits. Some of its key
+            features and benefits include: Dependency injection: NestJS provides
+            built-in support for dependency injection, which makes it easier to
+            manage dependencies and write modular and scalable code. Modular
+            architecture: NestJS follows a modular architecture, which allows
+            developers to break their applications into smaller and more
+            manageable modules. Intuitive CLI: NestJS provides an intuitive CLI
+            that makes it easy to create new applications, modules, controllers,
+            and services.
           </p>
         </div>
         <div className='pb-10'>
-          <h2 className='text-2xl font-semibold mb-2'>
-            difference between nodejs and express js.
-          </h2>
+          <h2 className='text-2xl font-semibold mb-2'>MongoDB Aggregation:</h2>
           <hr className='border border-cyan-600 mb-5' />
           <p>
-            Node.js is a runtime environment that allows you to run JavaScript
-            code outside of a browser. It provides a server-side platform for
-            building scalable and high-performance applications. Node.js is
-            built on Chrome's V8 JavaScript engine and uses an event-driven,
-            non-blocking I/O model, which makes it efficient for handling
-            concurrent requests. Node.js enables you to build server-side
-            applications, command-line tools, microservices, and more using
-            JavaScript.
+            When working with data in MongoDB, you may quickly have to run
+            complex operations, with multiple stages of operations to gather
+            metrics for your project. Generating reports and displaying useful
+            metadata are just two major use cases where MongoDB aggregation
+            operations can prove incredibly useful, powerful, and flexible.
           </p>
           <p>
-            Express.js is a web application framework built on top of Node.js.
-            It provides a set of features and utilities to simplify the
-            development of web applications. Express.js is minimalist and
-            unopinionated, giving developers the flexibility to structure and
-            design their applications according to their needs. Express.js
-            provides routing capabilities, middleware support, and templating
-            engines, making it easy to handle HTTP requests, define routes, and
-            render dynamic content. Express.js is widely adopted and has a large
-            ecosystem of plugins and middleware packages that enhance its
-            functionality.
-          </p>
-        </div>
-        <div className='pb-10'>
-          <h2 className='text-2xl font-semibold mb-2'>
-            What is a custom hook, and why will you create a custom hook?
-          </h2>
-          <hr className='border border-cyan-600 mb-5' />
-          <p>
-            Reusability: Custom hooks promote code reuse by allowing you to
-            encapsulate and share common logic across different components. They
-            enable you to extract and abstract complex or repetitive logic into
-            a single function, making it easier to maintain and reuse in
-            multiple parts of your application. Composition: Custom hooks enable
-            you to compose multiple hooks and combine their functionality. This
-            allows you to build more complex behaviors by combining smaller,
-            reusable hooks. It promotes modular and composable code, making it
-            easier to manage and reason about. Abstraction: Custom hooks can
-            abstract away the implementation details of a specific feature or
-            functionality, providing a clean and simplified interface to use in
-            your components. They encapsulate the inner workings of the logic
-            and expose a higher-level API, making it easier to understand and
-            use the functionality. Code organization: Custom hooks help to keep
-            your component code focused and concise. By extracting stateful
-            logic into custom hooks, you can separate concerns and keep your
-            components clean and easy to read. It improves code organization and
-            maintainability.
+            Aggregation operations process data records and return computed
+            results. Not only do we have the ability to aggregate data on the
+            client side with JavaScript, but we can use MongoDB to run
+            operations on the server against our collections stored in the
+            database before the result is returned to the client.
           </p>
         </div>
       </div>

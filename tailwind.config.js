@@ -8,5 +8,5 @@ export default {
       }, //end of fontFamily
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

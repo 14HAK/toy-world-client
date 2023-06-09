@@ -28,14 +28,16 @@ export const router = createBrowserRouter([
         path: '/shop',
         element: <Shop></Shop>,
         loader: () => {
-          return fetch('http://localhost:5000/products');
+          return fetch('https://server-sigma-lime.vercel.app/products');
         },
       },
       {
         path: '/product/details/:id',
         element: <Details></Details>,
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/products/${params.id}`);
+          return fetch(
+            `https://server-sigma-lime.vercel.app/products/${params.id}`
+          );
         },
       },
       {
@@ -53,9 +55,9 @@ export const router = createBrowserRouter([
       {
         path: '/add_toy',
         element: (
-          <PrivateRoute>
-            <AddToy></AddToy>
-          </PrivateRoute>
+          // <PrivateRoute>
+          <AddToy></AddToy>
+          // </PrivateRoute>
         ),
       },
       {

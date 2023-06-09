@@ -19,3 +19,7 @@
 #### commit9: private routes work demo.
 
 #### commit10: private routes navigation redirect route location.
+
+#### commit11: some blogs in Blog page.
+
+#### commit12: design personal add toys page name Add_toy.jsx.

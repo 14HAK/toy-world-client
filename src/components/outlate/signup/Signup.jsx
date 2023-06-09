@@ -93,14 +93,14 @@ const Signup = () => {
               <button className='w-full py-3 font-medium  text-slate-700 bg-[#DEB4B4] hover:bg-[#F6E1E1] rounded-lg border-slate-400 hover:shadow inline-flex space-x-2 items-center justify-center'>
                 <span>Sign up</span>
               </button>
-              <p className='text-center'>
+              <div className='text-center'>
                 Already have an account?{' '}
                 <button className='text-indigo-600 font-medium inline-flex space-x-1 items-center'>
                   <Link to={'/sign_in'}>
                     <span className='hover:underline'>Sign in</span>
                   </Link>
                 </button>
-              </p>
+              </div>
             </div>
           </form>
         </section>
