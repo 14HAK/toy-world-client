@@ -38,7 +38,17 @@ const SideBar = () => {
               to={'/add_toy'}
               className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
             >
-              Add-toy
+              Add-Toy
+            </Link>
+          )}
+          {!user ? (
+            <></>
+          ) : (
+            <Link
+              to={'/my_toy'}
+              className='mb-2 text-xl hover:underline hover:cursor-pointer hover:text-[#2b2b2b]'
+            >
+              My-Toy
             </Link>
           )}
           <Link

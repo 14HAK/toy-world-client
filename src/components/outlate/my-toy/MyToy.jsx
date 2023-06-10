@@ -1,21 +1,17 @@
 import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../context/ContextPass';
-import ProductItems from './prodactItems/ProductItems';
+import EveryToy from './EveryToy.jax/EveryToy';
 
-const Cart = () => {
+const MyToy = () => {
   const { user } = useContext(UserContext);
-  const [cartData, setCartData] = useState();
-
+  const [myToyData, setMyToyData] = useState();
   useEffect(() => {
-    fetch(
-      `https://toyserver-phi.vercel.app/cart?displayName=${user?.displayName}`
-    )
+    fetch(`https://toyserver-phi.vercel.app/my_toy?uid=${user?.uid}`)
       .then((res) => res.json())
-      .then((data) => setCartData(data));
+      .then((data) => setMyToyData(data));
   }, [user]);
 
-  // console.log(cartData);
-
+  console.log(myToyData);
   return (
     <div>
       <div className='overflow-x-auto'>
@@ -25,14 +21,12 @@ const Cart = () => {
               <th className='text-lg font-bold '>Category</th>
               <th className='text-lg font-bold '>Product Name</th>
               <th className='text-lg font-bold '>Price</th>
-              <th className='text-lg font-bold '>Authore</th>
+              <th className='text-lg font-bold '>User-Uid</th>
             </tr>
           </thead>
           <tbody>
-            {cartData?.map((cartItem, index) => {
-              return (
-                <ProductItems key={index} cartItem={cartItem}></ProductItems>
-              );
+            {myToyData?.map((every, index) => {
+              return <EveryToy key={index} data={every}></EveryToy>;
             })}
           </tbody>
         </table>
@@ -41,4 +35,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default MyToy;

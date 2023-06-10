@@ -2,7 +2,7 @@ const addToy = (data, user) => {
   console.log(data);
 
   if (user) {
-    fetch('https://server-sigma-lime.vercel.app/cart', {
+    fetch('https://toyserver-phi.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -5,11 +5,13 @@ import Shop from '../outlate/shop/Shop';
 import Cart from '../outlate/cart/Cart';
 import Blog from '../outlate/blog/Blog';
 import ErrorPage from '../errorPage/ErrorPage';
-import AddToy from '../outlate/addToy/AddToy';
+
 import Signin from '../outlate/signin/Signin';
 import Signup from '../outlate/signup/Signup';
 import Details from '../outlate/shop/detailsProduct/productDetails/Details';
 import PrivateRoute from '../Private/PrivateRoute';
+import AddToy from '../outlate/addToy/AddToy';
+import MyToy from '../outlate/my-toy/MyToy';
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +30,7 @@ export const router = createBrowserRouter([
         path: '/shop',
         element: <Shop></Shop>,
         loader: () => {
-          return fetch('https://server-sigma-lime.vercel.app/products');
+          return fetch('https://toyserver-phi.vercel.app/products');
         },
       },
       {
@@ -36,7 +38,7 @@ export const router = createBrowserRouter([
         element: <Details></Details>,
         loader: async ({ params }) => {
           return fetch(
-            `https://server-sigma-lime.vercel.app/products/${params.id}`
+            `https://toyserver-phi.vercel.app/product/details/${params.id}`
           );
         },
       },
@@ -57,6 +59,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddToy></AddToy>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/my_toy',
+        element: (
+          <PrivateRoute>
+            <MyToy></MyToy>
           </PrivateRoute>
         ),
       },
