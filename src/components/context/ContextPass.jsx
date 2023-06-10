@@ -11,11 +11,14 @@ import {
   GithubAuthProvider,
 } from 'firebase/auth';
 import app from '../firebaseconfig/FirebaseSDK';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const UserContext = createContext();
 
 const ContextPass = ({ children }) => {
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(true);
+  const [errMassege, setErrMassege] = useState();
 
   const auth = getAuth(app);
   const googleProvider = new GoogleAuthProvider();
@@ -55,6 +58,8 @@ const ContextPass = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
+        toast('Sign In success!');
+        setLoading(false);
       } else {
         setUser(null);
       }
@@ -74,11 +79,41 @@ const ContextPass = ({ children }) => {
     SignoutUser,
     GoogleSignin,
     GithubSignin,
+    loading,
+    errMassege,
+    setErrMassege,
   };
 
   // console.log(user);
 
-  return <UserContext.Provider value={pass}>{children}</UserContext.Provider>;
+  return (
+    <UserContext.Provider value={pass}>
+      <>
+        {children}
+        {/* toaster hot toest  */}
+        <Toaster
+          toastOptions={{
+            // Define default options
+            className: '',
+            duration: 5000,
+            style: {
+              background: '#363636',
+              color: '#fff',
+            },
+
+            // Default options for specific types
+            success: {
+              duration: 3000,
+              theme: {
+                primary: 'green',
+                secondary: 'black',
+              },
+            },
+          }}
+        />
+      </>
+    </UserContext.Provider>
+  );
 };
 
 export default ContextPass;

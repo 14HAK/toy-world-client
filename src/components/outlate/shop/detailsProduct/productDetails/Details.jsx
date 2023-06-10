@@ -8,7 +8,7 @@ import Rating from 'react-rating';
 import { UserContext } from '../../../../context/ContextPass';
 import addToy from '../../../addToy/PostToy';
 React.createElement(Rating);
-
+import toast, { Toaster } from 'react-hot-toast';
 const Details = () => {
   const { user } = useContext(UserContext);
   // console.log(user);
@@ -18,11 +18,33 @@ const Details = () => {
     product['displayName'] = user.displayName;
     if (user && product) {
       addToy(product, user);
+      toast('Product added to cart!');
     }
   };
 
   return (
     <>
+      {/* toaster hot toest  */}
+      <Toaster
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'black',
+            },
+          },
+        }}
+      />
       <div className='h-auto m-20  bg-[#DEB4B4] border-2 border-red-200 rounded-lg overflow-hidden'>
         <img
           className='lg:h-96 md:h-36 w-full object-cover object-center'

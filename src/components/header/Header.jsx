@@ -3,6 +3,7 @@ import './Header.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useContext } from 'react';
 import { UserContext } from '../context/ContextPass';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Header = () => {
   const { user, setUser, SignoutUser } = useContext(UserContext);
@@ -12,6 +13,7 @@ const Header = () => {
     SignoutUser()
       .then(() => {
         setUser(null);
+        toast('Sign out success!');
       })
       .catch();
   };
@@ -30,6 +32,27 @@ const Header = () => {
 
   return (
     <header>
+      {/* toaster hot toest  */}
+      <Toaster
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'black',
+            },
+          },
+        }}
+      />
       <header className='lg:px-16 px-8 bg-[#DEB4B4] shadow-md py-4 md:py-0'>
         <div className='container mx-auto flex flex-wrap items-center'>
           <div className='flex-1 flex justify-between items-center'>

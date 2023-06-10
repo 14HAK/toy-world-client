@@ -1,3 +1,5 @@
+import { toast } from 'react-hot-toast';
+
 const addToy = (data, user) => {
   console.log(data);
 
@@ -10,7 +12,8 @@ const addToy = (data, user) => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => console.log(data))
+      .catch((err) => toast('Product Added!'));
   }
 };
 

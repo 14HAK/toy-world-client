@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { UserContext } from '../../context/ContextPass';
 import addToy from './PostToy';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddToy = () => {
   const { user } = useContext(UserContext);
@@ -25,10 +26,32 @@ const AddToy = () => {
     };
 
     addToy(addToyData, user);
+    form.reset();
   };
 
   return (
     <div className='p-10'>
+      {/* toaster hot toest  */}
+      <Toaster
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'black',
+            },
+          },
+        }}
+      />
       <section className='w-full mx-auto bg-[#F6E1E1] p-8 rounded-xl shadow shadow-slate-300'>
         <h1 className='animate-bounce text-5xl font-devFont tracking-widest font-bold '>
           add your product...
