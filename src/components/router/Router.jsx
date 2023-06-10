@@ -35,7 +35,11 @@ export const router = createBrowserRouter([
       },
       {
         path: '/product/details/:id',
-        element: <Details></Details>,
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
         loader: async ({ params }) => {
           return fetch(
             `https://toyserver-phi.vercel.app/products/${params.id}`

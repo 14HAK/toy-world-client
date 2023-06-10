@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useContext } from 'react';
@@ -6,6 +6,7 @@ import { UserContext } from '../context/ContextPass';
 
 const Header = () => {
   const { user, setUser, SignoutUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const handleSignout = () => {
     SignoutUser()
@@ -15,18 +16,30 @@ const Header = () => {
       .catch();
   };
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const query = form.search.value;
+
+    fetch(`https://toyserver-phi.vercel.app/search?search=${query}`)
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+    navigate('/shop');
+  };
+
   return (
     <header>
       <header className='lg:px-16 px-8 bg-[#DEB4B4] shadow-md py-4 md:py-0'>
         <div className='container mx-auto flex flex-wrap items-center'>
           <div className='flex-1 flex justify-between items-center'>
             <form
-              action='/search'
+              onSubmit={handleSearch}
               className='flex flex-wrap justify-between md:flex-row'
             >
               <input
                 type='search'
-                name='query'
+                name='search'
                 placeholder='Search'
                 required='required'
                 className='md:w-[40rem] sm:w-full h-10 px-4 text-xl text-slate-500 bg-white border border-[#DEB4B4] rounded-md xl:transition-all xl:duration-300 dark:bg-gray-600 dark:text-gray-200 dark:border-gray-600 dark:focus:border-primary focus:outline-none focus:ring focus:ring-[tomato] dark:placeholder-gray-400'

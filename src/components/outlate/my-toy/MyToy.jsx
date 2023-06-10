@@ -22,6 +22,8 @@ const MyToy = () => {
               <th className='text-lg font-bold '>Product Name</th>
               <th className='text-lg font-bold '>Price</th>
               <th className='text-lg font-bold '>User-Uid</th>
+              <th className='text-lg font-bold '>Delete</th>
+              <th className='text-lg font-bold '>Update</th>
             </tr>
           </thead>
           <tbody>
