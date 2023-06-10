@@ -31,7 +31,7 @@ const SideBar = () => {
           >
             Cart
           </Link>
-          {user ? (
+          {!user ? (
             <></>
           ) : (
             <Link

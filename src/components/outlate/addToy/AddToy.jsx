@@ -1,4 +1,10 @@
+import { useContext } from 'react';
+import { UserContext } from '../../context/ContextPass';
+import addToy from './PostToy';
+
 const AddToy = () => {
+  const { user } = useContext(UserContext);
+
   const handleAddToyData = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -8,9 +14,17 @@ const AddToy = () => {
     const price = form.productPrice.value;
     const category = form.productCategory.value;
     const ratings = form.productRatings.value;
-    const addToyData = { name, details, img, price, category, ratings };
+    const addToyData = {
+      uid: user?.uid,
+      name,
+      details,
+      img,
+      price,
+      category,
+      ratings,
+    };
 
-    console.log(addToyData);
+    addToy(addToyData, user);
   };
 
   return (

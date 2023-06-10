@@ -31,6 +31,7 @@ const Signin = () => {
     GoogleSignin()
       .then((res) => {
         setUser(res?.user);
+        navigate(from, { replace: true });
       })
       .catch();
   };
@@ -39,6 +40,7 @@ const Signin = () => {
     GithubSignin()
       .then((res) => {
         setUser(res?.user);
+        navigate(from, { replace: true });
       })
       .catch();
   };

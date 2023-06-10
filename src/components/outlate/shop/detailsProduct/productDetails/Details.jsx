@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Full from '../../../../../assets/Full.svg';
 import Empty from '../../../../../assets/Empty.svg';
 import Half from '../../../../../assets/Half.svg';
 
 import { Link, useLoaderData } from 'react-router-dom';
 import Rating from 'react-rating';
+import { UserContext } from '../../../../context/ContextPass';
+import addToy from '../../../addToy/PostToy';
 React.createElement(Rating);
 
 const Details = () => {
+  const { user } = useContext(UserContext);
+  // console.log(user);
   const product = useLoaderData();
+
+  const handlePostCart = (product) => {
+    product['displayName'] = user.displayName;
+    if (user && product) {
+      addToy(product, user);
+    }
+  };
 
   return (
     <>
@@ -54,7 +65,10 @@ const Details = () => {
               to={`/product/details/${product?._id}`}
               className='text-slate-700 hover:text-[#F6E1E1] cursor-pointer inline-flex items-center md:mb-2 lg:mb-0'
             >
-              <button className='rounded-md hover:bg-red-300 font-semibold hover:text-slate-700 px-6  py-2 focus:ring-1 border border-[#e0e0e0] '>
+              <button
+                onClick={() => handlePostCart(product)}
+                className='rounded-md hover:bg-red-300 font-semibold hover:text-slate-700 px-6  py-2 focus:ring-1 border border-[#e0e0e0] '
+              >
                 Add to cart
               </button>
             </Link>

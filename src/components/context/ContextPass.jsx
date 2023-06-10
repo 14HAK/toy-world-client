@@ -53,7 +53,7 @@ const ContextPass = ({ children }) => {
   //user state manage
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) {
+      if (currentUser) {
         setUser(currentUser);
       } else {
         setUser(null);
@@ -75,6 +75,8 @@ const ContextPass = ({ children }) => {
     GoogleSignin,
     GithubSignin,
   };
+
+  // console.log(user);
 
   return <UserContext.Provider value={pass}>{children}</UserContext.Provider>;
 };
