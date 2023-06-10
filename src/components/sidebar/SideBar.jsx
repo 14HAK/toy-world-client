@@ -7,7 +7,7 @@ const SideBar = () => {
   const { user } = useContext(UserContext);
   return (
     <nav>
-      <div className='font-devFont grid grid-row-12 gap-16 pt-10 justify-center items-center text-center'>
+      <div className='font-devFont grid grid-row-12 gap-2 lg:gap-16  pt-0 lg:pt-10  justify-center items-center text-center'>
         <Link to={'/home'} className='w-56 hover:cursor-pointer'>
           <img src={SiteLogo} alt='store-logo' />
         </Link>
