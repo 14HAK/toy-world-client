@@ -4,7 +4,7 @@ const addToy = (data, user) => {
   console.log(data);
 
   if (user) {
-    fetch('https://toyserver-phi.vercel.app/cart', {
+    fetch('http://localhost:5000/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -12,8 +12,9 @@ const addToy = (data, user) => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => toast('Product Added!'));
+      .then((data) => toast('Product Added!'))
+      .catch((err) => console.log(err.message)
+      );
   }
 };
 

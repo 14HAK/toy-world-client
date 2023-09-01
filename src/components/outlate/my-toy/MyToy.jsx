@@ -1,15 +1,14 @@
-import { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../context/ContextPass';
+import { useEffect, useState } from 'react';
+
 import EveryToy from './EveryToy.jax/EveryToy';
 
 const MyToy = () => {
-  const { user } = useContext(UserContext);
   const [myToyData, setMyToyData] = useState();
   useEffect(() => {
-    fetch(`https://toyserver-phi.vercel.app/my_toy?uid=${user?.uid}`)
+    fetch(`http://localhost:5000/my_toy`)
       .then((res) => res.json())
       .then((data) => setMyToyData(data));
-  }, [user]);
+  }, []);
 
   console.log(myToyData);
   return (

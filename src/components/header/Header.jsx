@@ -24,7 +24,7 @@ const Header = () => {
     const form = event.target;
     const query = form.search.value;
 
-    fetch(`https://toyserver-phi.vercel.app/search?search=${query}`)
+    fetch(`http://localhost:5000/search?search=${query}`)
       .then((res) => res.json())
       .then((data) => console.log(data));
     navigate('/shop');

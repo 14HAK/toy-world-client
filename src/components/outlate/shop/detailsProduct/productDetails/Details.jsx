@@ -61,7 +61,7 @@ const Details = () => {
           <p className='leading-relaxed text-xl my-3'>
             {product?.details}.....
           </p>
-          <p className='text-md font-bold text-5xl grid grid-cols-4 items-center pb-2'>
+          <p className='text-md font-bold text-3xl grid grid-cols-4 items-center pb-2'>
             <span className='underline text-[#4b4b4b]'>PRICE : </span>
             <span className='text-[#4b4b4b]'>
               {product?.price}
