@@ -24,7 +24,7 @@ const Header = () => {
     const form = event.target;
     const query = form.search.value;
 
-    fetch(`http://localhost:5000/search?search=${query}`)
+    fetch(`https://toy-world-server-smoky.vercel.app/search?search=${query}`)
       .then((res) => res.json())
       .then((data) => console.log(data));
     navigate('/shop');

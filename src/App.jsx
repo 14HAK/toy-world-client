@@ -9,10 +9,10 @@ function App() {
       <div className='col-span-12'>
         <Header></Header>
       </div>
-      <div className=' col-span-12 lg:col-span-3 h-auto w-[45.5rem] lg:w-full p-5 bg-[#f6e1e1]'>
+      <div className=' col-span-12 lg:col-span-3 h-auto w-full p-5 bg-[#f6e1e1]'>
         <SideBar></SideBar>
       </div>
-      <div className='col-span-12 lg:col-span-9 p-5 h-auto  bg-[#EDD4D5] font-sans'>
+      <div className='col-span-12 lg:col-span-9 p-10 h-auto  bg-[#EDD4D5] font-sans'>
         <Outlet></Outlet>
       </div>
       <div className='col-span-12 p-5 bg-[#DEB4B4] '>

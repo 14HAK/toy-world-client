@@ -7,7 +7,9 @@ const Cart = () => {
   const [cartData, setCartData] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/cart?displayName=${user?.displayName}`)
+    fetch(
+      `https://toy-world-server-smoky.vercel.app/cart?displayName=${user?.displayName}`
+    )
       .then((res) => res.json())
       .then((data) => setCartData(data));
   }, [user]);

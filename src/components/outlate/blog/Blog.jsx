@@ -1,164 +1,164 @@
 const Blog = () => {
   return (
-    <div className=''>
-      <div className='w-full h-screen bg-[#F6E1E1] px-12 py-5 overflow-x-hidden'>
-        <div className='pb-10'>
-          <h2 className='text-2xl uppercase font-semibold mb-2'>
-            Differences between SQL and NoSQL:
-          </h2>
-          <hr className='border border-cyan-600 mb-5' />
-          <div>
-            <p>
-              Structured Query language (SQL) pronounced as “S-Q-L” or sometimes
-              as “See-Quel” is the standard language for dealing with Relational
-              Databases. A relational database defines relationships in the form
-              of tables.
-            </p>
-            <ul className='pt-3'>
-              <li>
-                0.SQL pronounced as “S-Q-L” or as “See-Quel” is primarily called
-                RDBMS or Relational Databases, whereas NoSQL is a Non-relational
-                or Distributed Database.
-              </li>
-              <br />
-              <li>
-                1.Comparing SQL vs NoSQL databases, SQL databases are
-                table-based databases, whereas NoSQL databases can be
-                document-based, key-value pairs, and graph databases.
-              </li>{' '}
-              <br />
-              <li>
-                2.SQL databases are vertically scalable, while NoSQL databases
-                are horizontally scalable.
-              </li>{' '}
-              <br />
-              <li>
-                3.SQL databases have a predefined schema, whereas NoSQL
-                databases use a dynamic schema for unstructured data.
-              </li>{' '}
-              <br />
-              <li>
-                4.Comparing NoSQL vs SQL performance, SQL requires specialized
-                DB hardware for better performance while NoSQL uses commodity
-                hardware.
-              </li>
-            </ul>
+    <section className='w-full h-full bg-[#EDD4D5] px-12 py-5 overflow-x-hidden'>
+      <div className=''>
+        <div className='flex flex-col items-center sm:px-5 md:flex-row'>
+          <div className='flex flex-col items-start justify-center w-full h-full pt-6 pr-0 pb-6 pl-0 mb-6 md:mb-0 md:w-1/2'>
+            <div
+              className='flex flex-col items-start justify-center h-full space-y-3 transform md:pr-10 lg:pr-16
+            md:space-y-5'
+            >
+              <div
+                className='bg-green-500 flex items-center leading-none rounded-full text-gray-50 pt-1.5 pr-3 pb-1.5 pl-2
+              uppercase inlineBlock'
+              >
+                <p className='inline'>
+                  <svg
+                    className='w-3.5 h-3.5 mr-1'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0
+                  00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755
+                  1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1
+                  0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z'
+                    />
+                  </svg>
+                </p>
+                <p className='inline text-xs font-medium'>New</p>
+              </div>
+              <a className='text-xl font-bold leading-none lg:text-3xl xl:text-5xl'>
+                Happiness kids journey :)
+              </a>
+              <div className='pt-2 pr-0 pb-0 pl-0'>
+                <p className='text-sm font-medium inline'>author:</p>
+                <a className='inline text-sm font-medium mt-0 mr-1 mb-0 ml-1 underline'>
+                  DULON
+                </a>
+                <p className='inline text-sm font-medium mt-0 mr-1 mb-0 ml-1'>
+                  · 23rd, April 2023 ·
+                </p>
+                <p className='text-gray-200 text-sm font-medium inline mt-0 mr-1 mb-0 ml-1'>
+                  1hr 20min. read
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='w-full md:w-1/2'>
+            <div className='block'>
+              <img
+                src='https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2lkcyUyMHRveXN8ZW58MHx8MHx8fDA%3D&w=1000&q=80'
+                className='object-cover rounded-lg max-h-64 sm:max-h-96 btn- w-full h-full'
+              />
+            </div>
           </div>
         </div>
-        <div className='pb-10'>
-          <h2 className='text-2xl font-semibold mb-2'>
-            What Are Refresh Tokens and How to Use Them Securely:
-          </h2>
-          <hr className='border border-cyan-600 mb-5' />
-          <p>
-            That is, a refresh token is a credential artifact that lets a client
-            application get new access tokens without having to ask the user to
-            log in
-          </p>
-          <br />
-          <br />
-          <p>
-            1. This is a guest post by Pius Aboyi. If you want to learn more
-            about how to manage sessions with refresh tokens, read this blog. If
-            you don’t want to have to write all this code, you can simply use
-            Passage to integrate passwordless authentication into your app, and
-            have them handle all the details for your app. ‍
-          </p>
-          <p>
-            2. A refresh token is a special key that enables a client for an API
-            or service to retrieve new access tokens without requiring the user
-            to perform a complete login. In other words, an application can
-            exchange a valid refresh token for a new access token. In addition
-            to the new access token, the service may return a new refresh token
-            too.
-          </p>
-          <p>
-            3. Why do refresh tokens matter, and does a client need to exchange
-            them for a new access token? The main reason why refresh tokens
-            exist is because most access tokens don't live forever. That is to
-            say, an access token may expire after a specific period of time like
-            a few hours or days. Hence, in order to avoid requesting that the
-            client perform an activity like entering a username and password to
-            retrieve a new access token, you can use refresh tokens to get a new
-            access token.
-            <pre>...............</pre>
-          </p>
-          <p>
-            4.To answer the above question, let me explain further why access
-            tokens usually have an expiration time. In a situation where a
-            malicious user gets a hold of a valid access token, they can make
-            requests on behalf of a user and access protected data. As a result,
-            access tokens expire after some time and become invalid. Refresh
-            tokens, on the other hand, live longer so that your application can
-            make use of it to retrieve a new access token.
-          </p>
-          <p>
-            5.By defining prop types using PropTypes, you can catch potential
-            errors and validate the props being passed to your components, which
-            helps in maintaining code quality and reducing bugs.
-          </p>
-        </div>
-        <div className='pb-10'>
-          <h2 className='text-2xl font-semibold mb-2'>
-            = Express vs Nest = .JS :
-          </h2>
-          <hr className='border border-cyan-600 mb-5' />
-          <p>
-            Express is a minimalist and flexible framework that is easy to use
-            and has a large community of developers. NestJS, on the other hand,
-            is a newer framework that provides additional features such as
-            dependency injection, a modular architecture, and an intuitive CLI.
-          </p>
-          <br />
-          <br />
-          <p>
-            1. (Express): Express is a minimalist and flexible framework that
-            provides a simple and intuitive API for building web applications
-            with Node.js. Some of its key features and benefits include: Simple
-            and intuitive API: Express provides a simple and easy-to-use API
-            that allows developers to quickly build web applications with
-            Node.js. Minimalist approach: Express follows a minimalist approach,
-            which means that it provides only the essential features and leaves
-            the rest to the developers.Middleware support: Express provides
-            built-in support for middleware, which allows developers to add
-            functionality to their applications easily. Large community: Express
-            has a large and active community of developers, which means that
-            there are plenty of resources available for learning and getting
-            help.
-          </p>
-          <p>
-            2. (NestJS): NestJS is a framework that is built on top of Express
-            and provides additional features and benefits. Some of its key
-            features and benefits include: Dependency injection: NestJS provides
-            built-in support for dependency injection, which makes it easier to
-            manage dependencies and write modular and scalable code. Modular
-            architecture: NestJS follows a modular architecture, which allows
-            developers to break their applications into smaller and more
-            manageable modules. Intuitive CLI: NestJS provides an intuitive CLI
-            that makes it easy to create new applications, modules, controllers,
-            and services.
-          </p>
-        </div>
-        <div className='pb-10'>
-          <h2 className='text-2xl font-semibold mb-2'>MongoDB Aggregation:</h2>
-          <hr className='border border-cyan-600 mb-5' />
-          <p>
-            When working with data in MongoDB, you may quickly have to run
-            complex operations, with multiple stages of operations to gather
-            metrics for your project. Generating reports and displaying useful
-            metadata are just two major use cases where MongoDB aggregation
-            operations can prove incredibly useful, powerful, and flexible.
-          </p>
-          <p>
-            Aggregation operations process data records and return computed
-            results. Not only do we have the ability to aggregate data on the
-            client side with JavaScript, but we can use MongoDB to run
-            operations on the server against our collections stored in the
-            database before the result is returned to the client.
-          </p>
+        <div className='grid grid-cols-12 sm:px-5 gap-x-8 gap-y-16'>
+          <div className='flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4'>
+            <img
+              src='https://media.4rgos.it/i/Argos/2621-m007-25-01-8298481-lamborghini-v2'
+              className='object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-'
+            />
+            <p
+              className='bg-green-500 flex items-center leading-none text-sm font-medium text-gray-50 pt-1.5 pr-3 pb-1.5 pl-3
+            rounded-full uppercase inlineBlock'
+            >
+              last corner
+            </p>
+            <a className='text-lg font-bold sm:text-xl md:text-2xl'>
+              DESSERT, GENERAL CHINESE, RECIPES
+            </a>
+            <p className='text-sm text-black'>
+              To make sure this recipe is truly foolproof, I have done extensive
+              testing (i.e. many slices of the same cake) so you have my words
+              that if you follow the recipe carefully you’d be able to make the
+              same cake as pictured!
+            </p>
+            <div className='pt-2 pr-0 pb-0 pl-0'>
+              <a className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-0 underline'>
+                ciki daw
+              </a>
+              <p className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-1'>
+                · JUNE 26, 2020 ·
+              </p>
+              <p className='inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1'>
+                20min. read
+              </p>
+            </div>
+          </div>
+          <div className='flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4'>
+            <img
+              src='https://media.istockphoto.com/id/1019966450/photo/enjoying-his-new-christmas-present.jpg?s=612x612&w=0&k=20&c=E68TzB3gtQnnpFR_5D-ADga2b5f6JAyrTSak0BcEqEY='
+              className='object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-'
+            />
+            <p
+              className='bg-green-500 flex items-center leading-none text-sm font-medium text-gray-50 pt-1.5 pr-3 pb-1.5 pl-3
+            rounded-full uppercase inlineBlock'
+            >
+              lemeon desper
+            </p>
+            <a className='text-lg font-bold sm:text-xl md:text-2xl'>
+              China Sichuan Food
+            </a>
+            <p className='text-sm text-black'>
+              Sichuan is famous for its hot and peppery approach to food and
+              while it’s not as spicy as, say, Hainanese food, you do need to
+              watch how much chili you’re adding to the mix at times.
+              <p></p>
+              There’s no denying though that this blog will teach you all you
+              need to know about delicious Sichuan food.
+            </p>
+            <div className='pt-2 pr-0 pb-0 pl-0'>
+              <a className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-0 underline'>
+                seli maw
+              </a>
+              <p className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-1'>
+                · 21st, may 2023 ·
+              </p>
+              <p className='inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1'>
+                30 min. read
+              </p>
+            </div>
+          </div>
+          <div className='flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4'>
+            <img
+              src='https://static-01.daraz.com.bd/p/fee97e6e741dbd728d283cc6c7be5531.png'
+              className='object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-'
+            />
+            <p
+              className='bg-green-500 flex items-center leading-none text-sm font-medium text-gray-50 pt-1.5 pr-3 pb-1.5 pl-3
+            rounded-full uppercase inlineBlock'
+            >
+              maniul fital
+            </p>
+            <a className='text-lg font-bold sm:text-xl md:text-2xl'>
+              The Woks Of Life
+            </a>
+            <p className='text-sm text-black'>
+              We love the name of this blog, if it were a cookbook, it might
+              even make it to our top cookbooks of all time for the sheer
+              ingenuity of it all.
+              <br />
+              It’s not a trick though, The Woks of Life is packed with tasty
+              Chinese food that you won’t be able to resist.
+            </p>
+            <div className='pt-2 pr-0 pb-0 pl-0'>
+              <a className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-0 underline'>
+                makaw boly
+              </a>
+              <p className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-1'>
+                · 19, Sep 2023 ·
+              </p>
+              <p className='inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1'>
+                10min. read
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

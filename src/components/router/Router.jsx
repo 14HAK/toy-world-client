@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         path: '/shop',
         element: <Shop></Shop>,
         loader: () => {
-          return fetch('http://localhost:5000/products');
+          return fetch('https://toy-world-server-smoky.vercel.app/products');
         },
       },
       {
@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/products/${params.id}`);
+          return fetch(`https://toy-world-server-smoky.vercel.app/products/${params.id}`);
         },
       },
       {

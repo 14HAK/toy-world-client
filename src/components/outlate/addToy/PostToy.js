@@ -4,7 +4,7 @@ const addToy = (data, user) => {
   console.log(data);
 
   if (user) {
-    fetch('http://localhost:5000/cart', {
+    fetch('https://toy-world-server-smoky.vercel.app/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

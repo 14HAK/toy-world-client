@@ -5,7 +5,7 @@ import EveryToy from './EveryToy.jax/EveryToy';
 const MyToy = () => {
   const [myToyData, setMyToyData] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/my_toy`)
+    fetch(`https://toy-world-server-smoky.vercel.app/my_toy`)
       .then((res) => res.json())
       .then((data) => setMyToyData(data));
   }, []);
