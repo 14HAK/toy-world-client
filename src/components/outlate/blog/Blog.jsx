@@ -2,7 +2,7 @@ const Blog = () => {
   return (
     <section className='w-full h-full bg-[#EDD4D5] px-12 py-5 overflow-x-hidden'>
       <div className=''>
-        <div className='flex flex-col items-center sm:px-5 md:flex-row'>
+        <div className='flex flex-col items-center sm:px-5 mb-5 md:flex-row'>
           <div className='flex flex-col items-start justify-center w-full h-full pt-6 pr-0 pb-6 pl-0 mb-6 md:mb-0 md:w-1/2'>
             <div
               className='flex flex-col items-start justify-center h-full space-y-3 transform md:pr-10 lg:pr-16
@@ -40,7 +40,7 @@ const Blog = () => {
                 <p className='inline text-sm font-medium mt-0 mr-1 mb-0 ml-1'>
                   · 23rd, April 2023 ·
                 </p>
-                <p className='text-gray-200 text-sm font-medium inline mt-0 mr-1 mb-0 ml-1'>
+                <p className='text-slate-500 text-sm font-medium inline mt-0 mr-1 mb-0 ml-1'>
                   1hr 20min. read
                 </p>
               </div>
@@ -55,8 +55,8 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-12 sm:px-5 gap-x-8 gap-y-16'>
-          <div className='flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 sm:px-5 gap-5'>
+          <div className='flex flex-col items-start space-y-3 '>
             <img
               src='https://media.4rgos.it/i/Argos/2621-m007-25-01-8298481-lamborghini-v2'
               className='object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-'
@@ -83,12 +83,12 @@ const Blog = () => {
               <p className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-1'>
                 · JUNE 26, 2020 ·
               </p>
-              <p className='inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1'>
+              <p className='inline text-xs font-medium text-slate-500 mt-0 mr-1 mb-0 ml-1'>
                 20min. read
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4'>
+          <div className='flex flex-col items-start space-y-3 '>
             <img
               src='https://media.istockphoto.com/id/1019966450/photo/enjoying-his-new-christmas-present.jpg?s=612x612&w=0&k=20&c=E68TzB3gtQnnpFR_5D-ADga2b5f6JAyrTSak0BcEqEY='
               className='object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-'
@@ -117,12 +117,12 @@ const Blog = () => {
               <p className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-1'>
                 · 21st, may 2023 ·
               </p>
-              <p className='inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1'>
+              <p className='inline text-xs font-medium text-slate-500 mt-0 mr-1 mb-0 ml-1'>
                 30 min. read
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4'>
+          <div className='flex flex-col items-start space-y-3 '>
             <img
               src='https://static-01.daraz.com.bd/p/fee97e6e741dbd728d283cc6c7be5531.png'
               className='object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-'
@@ -151,7 +151,7 @@ const Blog = () => {
               <p className='inline text-xs font-medium mt-0 mr-1 mb-0 ml-1'>
                 · 19, Sep 2023 ·
               </p>
-              <p className='inline text-xs font-medium text-gray-300 mt-0 mr-1 mb-0 ml-1'>
+              <p className='inline text-xs font-medium text-slate-500 mt-0 mr-1 mb-0 ml-1'>
                 10min. read
               </p>
             </div>
