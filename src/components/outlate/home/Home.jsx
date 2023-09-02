@@ -28,7 +28,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <div className='mx-auto max-w-screen-xl bg-red-100 rounded-md px-4 py-12 sm:px-6 md:py-16 lg:px-8'>
         <div className='mx-auto max-w-3xl text-center'>
           <h2 className='text-3xl font-bold text-slate-600 sm:text-4xl'>
@@ -61,6 +60,57 @@ const Home = () => {
               <dd className='text-4xl font-extrabold md:text-5xl'>86</dd>
             </div>
           </dl>
+        </div>
+      </div>
+
+      <div className='discount flex justify-center items-center my-10 '>
+        <div className=' text-center py-8 md:px-20 md:w-11/12 w-full bg-red-100 rounded-md outline-dotted outline-white outline-4 outline-offset-8'>
+          <h2 className='text-slate-500 text-xl font-bold tracking-wide'>
+            Get 25% Discount
+          </h2>
+          <p className='font-bold tracking-wide text-3xl text-slate-500 my-5'>
+            Get the best toys for your Princess Toy
+          </p>
+          <div className='h-16 flex items-center justify-center'>
+            <a to={'/'}>
+              <button className='bg-red-300 text-white px-5 py-3 font-bold rounded-2xl tracking-wide hover:bg-red-400 hover:text-lg ease-in-out duration-300'>
+                Show All Items
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className='py-16 px-10 bg-red-100 rounded-md'>
+        <div className='text-center text-slate-600 mb-10 tracking-wide'>
+          <h2 className='mb-3 text-3xl font-bold'>Our Toys Image Galley</h2>
+          <p className='text-xl'>
+            Your Little Princess deserve the best. <br />
+            So search the best Toy Place which will be surprising for her.
+          </p>
+        </div>
+        <div className=' space-x-4 h-60 w-full carousel carousel-center  p-6  bg-red-200 rounded-box'>
+          <div className='carousel-item'>
+            <img src='' className='rounded-box' />
+          </div>
+          <div className='carousel-item'>
+            <img
+              src='https://image.made-in-china.com/202f0j00wBQhspGlAncP/4-4-Meter-Electric-Rail-Car-Kids-Toys.jpg'
+              className='rounded-box'
+            />
+          </div>
+          <div className='carousel-item'>
+            <img
+              src='https://i.ytimg.com/vi/ELrahkq7g5g/maxresdefault.jpg'
+              className='rounded-box'
+            />
+          </div>
+          <div className='carousel-item'>
+            <img
+              src='https://img.fruugo.com/product/8/69/325114698_max.jpg'
+              className='rounded-box'
+            />
+          </div>
         </div>
       </div>
 
@@ -281,7 +331,6 @@ const Home = () => {
           </blockquote>
         </div>
       </div>
-
       <div className='text-center my-28'>
         <h1 className='text-4xl font-bold text-slate-500'>
           SUBSCRIBE FOR OUR NEWSLETTER
